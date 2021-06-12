@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Family Book</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="title">Family Book</h1>
+    <img id="img" src="/1img.jpg">
+    <h3 id="names" class="title">Family Book</h3>
+    <button onclick="update()">Next</button>
+    <script>
+        var images = [
+            "Rajesh Singh.png", "Daljeet Singh.png", "Himesh Singh.png"
+        ]
+        var names = [
+            "Rajesh Singh", "Daljeet Singh", "Himesh Singh"
+        ]
+
+        var i = 0;
+
+        function update() {
+            i++;
+            var number_of_family = 2
+            if (i > number_of_family) {
+                i = 0
+            }
+            var updateImage = images[i]
+            var updateName = names[i]
+            document.getElementById("names").innerHTML = updateName
+            document.getElementById("img").src = updateImage
+        }
+    </script>
+</body>
+
+</html>
